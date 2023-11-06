@@ -5,7 +5,7 @@ const express = require("express")
 const app = express();
 
 // ici on créer un route pour affcher un message simple simple
-app.get('/api/movie', (req, res) =>{
+app.post('/api/save', (req, res) =>{
     res.send('Build something amazing! 🚀')
 })
 app.listen(5000,() => console.log('Le serveur est lancé sur le port 5000'));
