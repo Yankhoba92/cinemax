@@ -9,7 +9,7 @@ const Favorites = ({}) => {
     fetch(apiJson)
       .then((response) => response.json())
       .then((data) => setFavorites(data.favorites)); // On ajoute les favoris à la constante favorites
-  });
+  }, []);
 
   return (
     <>
