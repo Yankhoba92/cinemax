@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import "./styles.css";
+import "../styles.css";
 // Import du logo pour interpolation dans jsx
-import cinemaxLogo from "./assets/cinemax-lg.png";
+import cinemaxLogo from "../assets/cinemax-lg.png";
 
 // Nos composants
-import Search from "./componenets/Search";
-import Movies from "./componenets/Movies";
+import Search from "../componenets/Search";
+import Movies from "../componenets/Movies";
 
-export default function App() {
+export default function Home() {
   // OMDB API
   const API = "https://www.omdbapi.com/?apikey=78620d47";
 

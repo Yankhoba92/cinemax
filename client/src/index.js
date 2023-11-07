@@ -1,18 +1,21 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import "./styles.css";
-import App from "./App";
+import Home from "./pages/Home";
+import Favorites from "./pages/Favorites";
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
   },
   {
     path: "/favorites",
     element: <Favorites />,
-  }
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
