@@ -1,12 +1,12 @@
 import React from "react";
 
-// Cec composant représenete la barre de recherche
+// Ce composant représente le résultat de la recherche
 const Movies = ({ movies }) => {
   // Lien IMDB
-  const imdb = "https://www.imdb.com/title/";
+  const imdb = "https://imdb.com/title/";
+  const star = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#fff82e" d="M16.23 18L12 15.45L7.77 18l1.12-4.81l-3.73-3.23l4.92-.42L12 5l1.92 4.53l4.92.42l-3.73 3.23L16.23 18M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg>`
 
   return (
-    
     <div className="movies">
       
       {movies.map((movie) => (
