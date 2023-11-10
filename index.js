@@ -30,6 +30,9 @@ const Save = require("./functions/Save"); // Importation de la fonction Save
  */
 app.use(express.urlencoded({ extended: true }), cors());
 
+app.get("/", (req,res)=>{
+  res.redirect("/")
+})
 
 // Route permettant de traiter l'enregistrement d'un film dans la liste des favoris
 app.post("/api/save", (req, res) => {
@@ -37,11 +40,7 @@ app.post("/api/save", (req, res) => {
   const saveStatus = Save(imdbID); // On appelle la fonction Save en lui envoyant les données
   // Vérification du statut de la fonction Save
   if (saveStatus) {
-    res.status(200).send("Le film a bien été ajouté à vos favoris !");
-  } else {
-    res
-      .status(500)
-      .send("Une erreur est survenue lors de l'ajout du film à vos favoris.");
+    res.redirect("/favorites?message=votre+messa+a+bien+été+ajouter")
   }
 });
 
