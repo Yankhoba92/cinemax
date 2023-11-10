@@ -6,7 +6,7 @@ const Favorites = ({}) => {
   const [favorites, setFavorites] = useState([]);
   const [movies, setMovies] = useState([]);
 
-  const API = "http://www.omdbapi.com/?apikey=78620d47"; 
+  const API = "http://www.omdbapi.com/?apikey=78620d47";
 
   const fetchFavorites = async () => {
     try {
@@ -26,19 +26,17 @@ const Favorites = ({}) => {
     const moviesArray = [];
     try {
       for (const item of favorites) {
-        const response = await fetch(API +"&i=" + item.movie);
+        const response = await fetch(API + "&i=" + item.movie);
         const data = await response.json();
         moviesArray.push({
           imdbID: data.imdbID,
           Title: data.Title,
           Poster: data.Poster,
         });
-        console.log(data.Title);
-        if (moviesArray.length > 0) {
-          // Vérifie que le ableau n'est pas vide
-          setMovies(moviesArray);
-          
-        }
+      }
+      if (moviesArray.length > 0) {
+        // Vérifie que le ableau n'est pas vide
+        setMovies(moviesArray);
       }
     } catch (error) {
       console.log(
