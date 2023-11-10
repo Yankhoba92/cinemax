@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Movies from "../componenets/Movies";
-
+import cinemaxLogo from "../assets/cinemax-lg.png";
+import NavBar from "../componenets/Nav";
 const Favorites = ({}) => {
   const [favorites, setFavorites] = useState([]);
   const [movies, setMovies] = useState([]);
@@ -53,6 +54,7 @@ const Favorites = ({}) => {
   }, [favorites]);
   return (
     <>
+      <NavBar />
       <h1>Favorites</h1>
       <div>
         <Movies movies={movies} />

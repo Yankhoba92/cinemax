@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.51e631a6.css",
+    "main.js": "/static/js/main.d27d27f8.js",
+    "static/media/cinemax-lg.png": "/static/media/cinemax-lg.06c46b4bda6159ebdade.png",
+    "static/media/cinemax-bg.png": "/static/media/cinemax-bg.4f2cb0ac523768c8c77b.png",
+    "index.html": "/index.html",
+    "main.51e631a6.css.map": "/static/css/main.51e631a6.css.map",
+    "main.d27d27f8.js.map": "/static/js/main.d27d27f8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51e631a6.css",
+    "static/js/main.d27d27f8.js"
+  ]
+}

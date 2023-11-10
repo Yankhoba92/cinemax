@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../styles.css";
 // Import du logo pour interpolation dans jsx
 import cinemaxLogo from "../assets/cinemax-lg.png";
+import NavBar from "../componenets/Nav";
 
 // Nos composants
 import Search from "../componenets/Search";
@@ -33,7 +34,8 @@ export default function Home() {
   }, []);
   return (
     <>
-      <div className="App">
+      
+        <NavBar/>
         <header>
           <img src={cinemaxLogo} className="logo" alt="logo cinema" />
           <Search
@@ -45,7 +47,7 @@ export default function Home() {
         <main>
           <Movies movies={movies} />
         </main>
-      </div>
+      
     </>
   );
 }
